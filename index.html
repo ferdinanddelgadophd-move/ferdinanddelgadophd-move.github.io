@@ -35,7 +35,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Noise texture overlay ── */
   body::after {
     content: '';
     position: fixed;
@@ -47,9 +46,6 @@
 
   .container { max-width: 1080px; margin: 0 auto; padding: 0 2.5rem; }
 
-  /* ════════════════════════════════════════
-     NAVIGATION
-     ════════════════════════════════════════ */
   nav {
     position: fixed;
     top: 0;
@@ -63,9 +59,7 @@
     transition: box-shadow 0.3s ease;
   }
 
-  nav.scrolled {
-    box-shadow: 0 1px 30px rgba(0,0,0,0.06);
-  }
+  nav.scrolled { box-shadow: 0 1px 30px rgba(0,0,0,0.06); }
 
   .nav-inner {
     max-width: 1080px;
@@ -86,11 +80,7 @@
     text-decoration: none;
   }
 
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
 
   .nav-links a {
     font-size: 0.78rem;
@@ -117,9 +107,6 @@
   .nav-links a:hover { color: var(--black); }
   .nav-links a:hover::after { width: 100%; }
 
-  /* ════════════════════════════════════════
-     HERO
-     ════════════════════════════════════════ */
   .hero {
     padding: 11rem 0 6rem;
     position: relative;
@@ -216,15 +203,8 @@
     color: var(--gold-dark);
   }
 
-  .hero-contact a svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
+  .hero-contact a svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-  /* ════════════════════════════════════════
-     STATS STRIP
-     ════════════════════════════════════════ */
   .stats-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -237,11 +217,7 @@
     animation: fadeUp 0.7s ease forwards 1s;
   }
 
-  .stat-cell {
-    background: var(--white);
-    padding: 2rem 2.5rem;
-    text-align: center;
-  }
+  .stat-cell { background: var(--white); padding: 2rem 2.5rem; text-align: center; }
 
   .stat-number {
     font-family: 'Cormorant Garamond', serif;
@@ -260,12 +236,7 @@
     color: var(--mid-gray);
   }
 
-  /* ════════════════════════════════════════
-     SECTION HEADERS
-     ════════════════════════════════════════ */
-  .section {
-    padding: 5rem 0;
-  }
+  .section { padding: 5rem 0; }
 
   .section-label {
     display: inline-flex;
@@ -304,14 +275,7 @@
     line-height: 1.8;
   }
 
-  /* ════════════════════════════════════════
-     PROJECT CARDS
-     ════════════════════════════════════════ */
-  .projects-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
+  .projects-grid { display: grid; gap: 1.5rem; margin-top: 3rem; }
 
   .project-card {
     display: grid;
@@ -362,11 +326,7 @@
     z-index: 1;
   }
 
-  .project-icon svg {
-    width: 22px;
-    height: 22px;
-    color: var(--gold);
-  }
+  .project-icon svg { width: 22px; height: 22px; color: var(--gold); }
 
   .project-type {
     font-size: 0.6rem;
@@ -379,9 +339,7 @@
     z-index: 1;
   }
 
-  .project-body {
-    padding: 2rem 2.5rem;
-  }
+  .project-body { padding: 2rem 2.5rem; }
 
   .project-title {
     font-family: 'Cormorant Garamond', serif;
@@ -400,12 +358,7 @@
     font-weight: 300;
   }
 
-  .project-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
-  }
+  .project-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
 
   .project-tag {
     font-size: 0.7rem;
@@ -418,6 +371,18 @@
     letter-spacing: 0.3px;
   }
 
+  .project-link {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--gold-dark);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .project-link:hover { color: var(--gold); }
+
   .project-outcome {
     font-size: 0.82rem;
     color: var(--gold-dark);
@@ -427,9 +392,6 @@
     line-height: 1.7;
   }
 
-  /* ════════════════════════════════════════
-     SKILLS / EXPERTISE
-     ════════════════════════════════════════ */
   .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -441,10 +403,7 @@
     margin-top: 3rem;
   }
 
-  .expertise-cell {
-    background: var(--white);
-    padding: 2.25rem;
-  }
+  .expertise-cell { background: var(--white); padding: 2.25rem; }
 
   .expertise-cell h4 {
     font-family: 'Cormorant Garamond', serif;
@@ -454,21 +413,9 @@
     margin-bottom: 0.75rem;
   }
 
-  .expertise-cell p {
-    font-size: 0.82rem;
-    color: var(--mid-gray);
-    line-height: 1.8;
-    font-weight: 300;
-  }
+  .expertise-cell p { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.8; font-weight: 300; }
 
-  /* ════════════════════════════════════════
-     EDUCATION
-     ════════════════════════════════════════ */
-  .education-list {
-    margin-top: 3rem;
-    display: grid;
-    gap: 0;
-  }
+  .education-list { margin-top: 3rem; display: grid; gap: 0; }
 
   .education-item {
     display: grid;
@@ -488,29 +435,11 @@
     color: var(--black);
   }
 
-  .edu-details {
-    font-size: 0.88rem;
-    color: var(--dark-gray);
-    font-weight: 300;
-  }
+  .edu-details { font-size: 0.88rem; color: var(--dark-gray); font-weight: 300; }
+  .edu-details .school { font-weight: 500; color: var(--charcoal); }
+  .edu-details .emphasis { color: var(--mid-gray); font-style: italic; }
 
-  .edu-details .school {
-    font-weight: 500;
-    color: var(--charcoal);
-  }
-
-  .edu-details .emphasis {
-    color: var(--mid-gray);
-    font-style: italic;
-  }
-
-  /* ════════════════════════════════════════
-     CTA / FOOTER
-     ════════════════════════════════════════ */
-  .cta-section {
-    padding: 5rem 0;
-    text-align: center;
-  }
+  .cta-section { padding: 5rem 0; text-align: center; }
 
   .cta-box {
     background: var(--black);
@@ -551,13 +480,7 @@
     position: relative;
   }
 
-  .cta-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    position: relative;
-  }
+  .cta-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; position: relative; }
 
   .cta-links a {
     display: inline-flex;
@@ -572,10 +495,7 @@
     transition: all 0.3s ease;
   }
 
-  .cta-primary {
-    background: var(--gold);
-    color: var(--black);
-  }
+  .cta-primary { background: var(--gold); color: var(--black); }
 
   .cta-primary:hover {
     background: var(--gold-light);
@@ -583,46 +503,19 @@
     box-shadow: 0 6px 24px rgba(197,165,90,0.3);
   }
 
-  .cta-secondary {
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.7);
-  }
+  .cta-secondary { border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+  .cta-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-  .cta-secondary:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
+  .footer { padding: 3rem 0; text-align: center; font-size: 0.72rem; color: var(--mid-gray); letter-spacing: 1px; }
 
-  .footer {
-    padding: 3rem 0;
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--mid-gray);
-    letter-spacing: 1px;
-  }
-
-  /* ════════════════════════════════════════
-     ANIMATIONS
-     ════════════════════════════════════════ */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ════════════════════════════════════════
-     RESPONSIVE
-     ════════════════════════════════════════ */
   @media (max-width: 768px) {
     .container { padding: 0 1.5rem; }
     .nav-inner { padding: 0 1.5rem; }
@@ -630,16 +523,9 @@
     .nav-links a { font-size: 0.7rem; letter-spacing: 1px; }
     .stats-strip { grid-template-columns: repeat(2, 1fr); margin: 0 -1.5rem; }
     .project-card { grid-template-columns: 1fr; }
-    .project-sidebar {
-      flex-direction: row;
-      padding: 1.25rem 2rem;
-      justify-content: flex-start;
-    }
+    .project-sidebar { flex-direction: row; padding: 1.25rem 2rem; justify-content: flex-start; }
     .expertise-grid { grid-template-columns: 1fr; }
-    .education-item {
-      grid-template-columns: 1fr;
-      gap: 0.3rem;
-    }
+    .education-item { grid-template-columns: 1fr; gap: 0.3rem; }
     .hero { padding: 9rem 0 4rem; }
     .cta-box { padding: 3rem 2rem; }
   }
@@ -650,7 +536,6 @@
     .hero-contact a { justify-content: center; }
   }
 
-  /* Print */
   @media print {
     nav { display: none; }
     .hero { padding-top: 2rem; }
@@ -660,7 +545,6 @@
 </head>
 <body>
 
-<!-- ═══ NAVIGATION ═══ -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-name">Ferdinand Delgado, PhD</a>
@@ -673,7 +557,6 @@
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
 <div class="container">
   <section class="hero">
     <div class="hero-eyebrow">Data Scientist · Applied Statistician</div>
@@ -684,9 +567,9 @@
       Background in biomechanics and human performance with a foundation in mathematics.
     </p>
     <div class="hero-contact">
-      <a href="/cdn-cgi/l/email-protection#c9afacbbada0a7a8a7adadaca5aea8ada6b9a1ad89aea4a8a0a5e7aaa6a4">
+      <a href="mailto:ferdinanddelgadophd@gmail.com">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        <span class="__cf_email__" data-cfemail="3f595a4d5b56515e515b5b5a53585e5b504f575b7f58525e5653115c5052">[email&#160;protected]</span>
+        ferdinanddelgadophd@gmail.com
       </a>
       <a href="https://www.linkedin.com/in/ferdinanddelgado/" target="_blank" rel="noopener">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -696,7 +579,6 @@
   </section>
 </div>
 
-<!-- ═══ STATS STRIP ═══ -->
 <div class="stats-strip">
   <div class="stat-cell">
     <div class="stat-number">PhD</div>
@@ -716,7 +598,6 @@
   </div>
 </div>
 
-<!-- ═══ PROJECTS ═══ -->
 <div class="container">
   <section class="section" id="projects">
     <div class="section-label">Selected Work</div>
@@ -725,7 +606,6 @@
 
     <div class="projects-grid">
 
-      <!-- Project 1: Force Plate Report System -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -753,34 +633,6 @@
         </div>
       </div>
 
-      <!-- Project 2: Streamlit Web App -->
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-          </div>
-          <div class="project-type">Web<br>App</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Interactive Athlete Analytics Platform</h3>
-          <p class="project-summary">
-            Developed a Streamlit web application with a multi-step wizard for generating custom athlete reports. 
-            Features include data source abstraction (supports both API and spreadsheet import), assessment discovery 
-            that automatically detects all test types in the data, configurable metrics selection, longitudinal trend 
-            analysis with multiple baseline rules, and saveable report templates as JSON configurations for reproducibility.
-          </p>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Streamlit</span>
-            <span class="project-tag">Hawkin Dynamics API</span>
-            <span class="project-tag">Data Abstraction</span>
-            <span class="project-tag">UX Design</span>
-          </div>
-          <div class="project-outcome">Multi-page application with data ingestion, athlete selection, metric configuration, longitudinal analysis, and PDF export — all browser-based.</div>
-        </div>
-      </div>
-
-      <!-- Project 3: Gait Analysis & Fall Risk -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -809,7 +661,6 @@
         </div>
       </div>
 
-      <!-- Project 4: Organizational Data Pipeline -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -839,7 +690,6 @@
     </div>
   </section>
 
-  <!-- ═══ EXPERTISE ═══ -->
   <section class="section" id="expertise">
     <div class="section-label">Core Competencies</div>
     <h2 class="section-title">Expertise</h2>
@@ -847,32 +697,31 @@
     <div class="expertise-grid">
       <div class="expertise-cell fade-in">
         <h4>Statistical Analysis</h4>
-        <p>Multivariate analysis, logistic regression, interaction effects, effect sizes, FDR correction, ROC/AUC evaluation, assumption testing, normative modeling, and percentile analysis. Naturally drawn to finding conditional patterns in complex data.</p>
+        <p>Multivariate analysis, logistic regression, interaction effects, effect sizes, FDR correction, ROC/AUC evaluation, assumption testing, normative modeling, and percentile analysis.</p>
       </div>
       <div class="expertise-cell fade-in">
         <h4>Python & Data Tools</h4>
-        <p>Python for data pipelines, API integrations, automated reporting, and statistical computing. Streamlit web applications, PDF generation, Excel automation, and data visualization. Comfortable building production-level software tools.</p>
-      </div>
-      <div class="expertise-cell fade-in">
-        <h4>AI & Machine Learning</h4>
-        <p>Retrieval-Augmented Generation (RAG) systems, vector databases (ChromaDB), LLM API integration (Anthropic Claude), prompt engineering, and AI-powered data interpretation pipelines for automated insight generation.</p>
+        <p>Python for data pipelines, API integrations, automated reporting, and statistical computing. PDF generation, Excel automation, and data visualization.</p>
       </div>
       <div class="expertise-cell fade-in">
         <h4>Biomechanics & Human Performance</h4>
-        <p>Force plate assessment, gait analysis, IMU sensor data processing, motion capture, center of pressure analysis, and athletic performance testing. Deep domain expertise in translating movement data into practical insights.</p>
+        <p>Force plate assessment, gait analysis, IMU sensor data processing, motion capture, and athletic performance testing. Deep domain expertise in translating movement data into practical insights.</p>
       </div>
       <div class="expertise-cell fade-in">
         <h4>Research Design</h4>
-        <p>PhD-trained in experimental design, human subjects research (IRB), data collection protocols, literature review, and scientific communication. Published researcher with conference presentation experience.</p>
+        <p>PhD-trained in experimental design, human subjects research (IRB), data collection protocols, literature review, and scientific communication.</p>
       </div>
       <div class="expertise-cell fade-in">
         <h4>Data Communication</h4>
-        <p>Translating complex statistical findings into clear, actionable reports for non-technical audiences. Experience building automated reporting systems that make data accessible to coaches, clinicians, and stakeholders.</p>
+        <p>Translating complex statistical findings into clear, actionable reports for non-technical audiences. Experience building automated reporting systems.</p>
+      </div>
+      <div class="expertise-cell fade-in">
+        <h4>Sport Science</h4>
+        <p>Over a decade of experience in track and field coaching and athletic performance. Understanding of training periodization, performance monitoring, and athlete development.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══ EDUCATION ═══ -->
   <section class="section" id="education">
     <div class="section-label">Academic Background</div>
     <h2 class="section-title">Education</h2>
@@ -891,7 +740,11 @@
         <div class="edu-details">
           <span class="school">Texas A&amp;M University–Corpus Christi</span><br>
           Kinesiology<br>
-          <span class="emphasis">Emphav>
+          <span class="emphasis">Emphasis in Sport Science</span>
+        </div>
+      </div>
+      <div class="education-item fade-in">
+        <div class="edu-degree">Graduate Certificate</div>
         <div class="edu-details">
           <span class="school">University of New Hampshire</span><br>
           Data Science
@@ -907,7 +760,6 @@
     </div>
   </section>
 
-  <!-- ═══ CTA ═══ -->
   <section class="cta-section" id="contact">
     <div class="cta-box">
       <h3>Let's work together</h3>
@@ -928,15 +780,12 @@
   <div class="footer">© 2026 Ferdinand Delgado, PhD</div>
 </div>
 
-<!-- ═══ SCRIPTS ═══ -->
 <script>
-  // Navbar scroll effect
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  // Scroll-triggered fade-in
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
