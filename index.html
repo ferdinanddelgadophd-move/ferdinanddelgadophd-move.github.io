@@ -111,6 +111,26 @@
     padding: 11rem 0 6rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-headshot {
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--cream);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 1s;
   }
 
   .hero::before {
@@ -526,7 +546,9 @@
     .project-sidebar { flex-direction: row; padding: 1.25rem 2rem; justify-content: flex-start; }
     .expertise-grid { grid-template-columns: 1fr; }
     .education-item { grid-template-columns: 1fr; gap: 0.3rem; }
-    .hero { padding: 9rem 0 4rem; }
+    .hero { padding: 9rem 0 4rem; flex-direction: column; text-align: center; }
+    .hero-headshot { width: 200px; height: 200px; order: -1; }
+    .hero-contact { justify-content: center; }
     .cta-box { padding: 3rem 2rem; }
   }
 
@@ -560,28 +582,35 @@
 
 <div class="container">
   <section class="hero">
-    <div class="hero-eyebrow">Interdisciplinary Research Scientist · Data Scientist · Applied Statistician</div>
-    <h1>Turning complex data<br>into <strong>actionable patterns</strong></h1>
-    <p class="hero-description">
-      Interdisciplinary researcher bridging biomechanics, data science, and human performance. 
-      Working with populations from athletes to older adults, I specialize in building 
-      Python-based data pipelines, statistical modeling, and finding conditional relationships 
-      in complex datasets. Background in mathematics with graduate training in movement science.
-    </p>
-    <div class="hero-contact">
-      <a href="mailto:ferdinanddelgadophd@gmail.com">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        ferdinanddelgadophd@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/ferdinanddelgado/" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://www.movemeasure.com" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        movemeasure.com
-      </a>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Interdisciplinary Research Scientist · Data Scientist · Applied Statistician</div>
+      <h1>Turning complex data<br>into <strong>actionable patterns</strong></h1>
+      <p class="hero-description">
+        Interdisciplinary researcher bridging biomechanics, data science, and human performance. 
+        Working with populations from athletes to older adults, I specialize in building 
+        Python-based data pipelines, statistical modeling, and finding conditional relationships 
+        in complex datasets. Background in mathematics with graduate training in movement science.
+      </p>
+      <div class="hero-contact">
+        <a href="mailto:ferdinanddelgadophd@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          ferdinanddelgadophd@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/ferdinanddelgado/" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://scholar.google.com/citations?user=5hCbsrgAAAAJ&hl=en" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M20 10v6"/><path d="M20 18.5a.5.5 0 11-1 0 .5.5 0 011 0z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://www.movemeasure.com" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          movemeasure.com
+        </a>
+      </div>
     </div>
+    <img src="headshot.jpg" alt="Ferdinand Delgado, PhD" class="hero-headshot">
   </section>
 </div>
 
