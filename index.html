@@ -543,7 +543,31 @@
   .cta-secondary { border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
   .cta-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-  .footer { padding: 3rem 0; text-align: center; font-size: 0.72rem; color: var(--mid-gray); letter-spacing: 1px; }
+  .footer {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    border-top: 1px solid var(--cream);
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: var(--mid-gray);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-credit {
+    font-size: 0.7rem;
+    color: var(--mid-gray);
+    letter-spacing: 0.5px;
+    font-style: italic;
+  }
+
+  .footer-credit span {
+    color: var(--gold-dark);
+    font-style: normal;
+    font-weight: 500;
+  }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -998,7 +1022,9 @@
     </div>
   </section>
 
-  <div class="footer">© 2026 Ferdinand Delgado, PhD</div>
+  <div class="footer">
+    <div class="footer-credit">© 2026 · Designed & developed by <span>Ferdinand Delgado</span></div>
+  </div>
 </div>
 
 <script>
