@@ -832,7 +832,37 @@
 
     <div class="projects-grid">
 
-      <!-- Applied Project 1: VR Longitudinal Intervention -->
+      <!-- Applied Project 1: Force Plate Assessment System -->
+      <div class="project-card fade-in">
+        <div class="project-sidebar">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <div class="project-type">Data Product<br>& Tooling</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Force Plate Assessment System — Signal Processing to PDF Reports</h3>
+          <ul class="project-bullets">
+            <li>Built a full-stack reporting tool that pulls raw force plate data via the Hawkin Dynamics API, applies signal processing (4th-order Butterworth low-pass filter at 10 Hz, mean-removal centering), and computes derived sway metrics: path length integration, 95% confidence ellipse via covariance eigenvalues, AP/ML range, and sway velocity.</li>
+            <li>Implemented event detection and feature extraction from continuous force-time signals — including activity duration detection from bilateral force plates and quadrant-based COP angle segmentation for automatic lean-direction classification from ~60s balance trials.</li>
+            <li>Designed for non-technical practitioners: a Flask-based GUI handles athlete selection, test configuration, and branded multi-page PDF generation. Deployed with D1 collegiate athletes, older adult clinical populations, and high school programs.</li>
+          </ul>
+          <div class="project-details">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Signal Processing</span>
+            <span class="project-tag">Butterworth Filter</span>
+            <span class="project-tag">COP Analysis</span>
+            <span class="project-tag">Event Detection</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">REST API</span>
+            <span class="project-tag">PDF Generation</span>
+          </div>
+          <a href="https://github.com/ferdinanddelgadophd-move/force-plate-report-generator" class="project-link" target="_blank">View on GitHub →</a>
+          <div class="project-focus"><strong>Focus:</strong> Raw sensor signal → processed features → decision-ready reports. The same signal processing and feature extraction pipeline used in wearable device firmware and health analytics platforms.</div>
+        </div>
+      </div>
+
+      <!-- Applied Project 2: VR Longitudinal Intervention -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -858,7 +888,7 @@
         </div>
       </div>
 
-      <!-- Applied Project 2: Wearable Gait Analysis Pipeline -->
+      <!-- Applied Project 3: Wearable Gait Analysis Pipeline -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -882,37 +912,6 @@
           </div>
           <a href="https://github.com/ferdinanddelgadophd-move/gait-fall-risk-analysis" class="project-link" target="_blank">View on GitHub →</a>
           <div class="project-focus"><strong>Focus:</strong> Wearable sensor data processing and feature extraction — the same analytical workflows used in product R&D at companies building health and performance wearables.</div>
-        </div>
-      </div>
-
-      <!-- Applied Project 3: Force Plate Assessment System -->
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          </div>
-          <div class="project-type">Data Product<br>& Tooling</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Force Plate Assessment System — Signal Processing to PDF Reports</h3>
-          <ul class="project-bullets">
-            <li>Built a full-stack reporting tool that pulls raw force plate data via the Hawkin Dynamics API, applies signal processing (4th-order Butterworth low-pass filter at 10 Hz, mean-removal centering), and computes derived sway metrics: path length integration, 95% confidence ellipse via covariance eigenvalues, AP/ML range, and sway velocity.</li>
-            <li>Implemented event detection and feature extraction from continuous force-time signals — including Savitzky-Golay differentiation for eccentric descent rate-of-force analysis (5x Sit-to-Stand), activity duration detection from bilateral force plates, and quadrant-based COP angle segmentation for automatic lean-direction classification from ~60s balance trials.</li>
-            <li>Designed for non-technical practitioners: a Flask-based GUI handles athlete selection, test configuration, and branded multi-page PDF generation. Deployed with D1 collegiate athletes, older adult clinical populations, and high school programs.</li>
-          </ul>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Signal Processing</span>
-            <span class="project-tag">Butterworth Filter</span>
-            <span class="project-tag">Savitzky-Golay</span>
-            <span class="project-tag">COP Analysis</span>
-            <span class="project-tag">Event Detection</span>
-            <span class="project-tag">Flask</span>
-            <span class="project-tag">REST API</span>
-            <span class="project-tag">PDF Generation</span>
-          </div>
-          <a href="https://github.com/ferdinanddelgadophd-move/force-plate-report-generator" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-focus"><strong>Focus:</strong> Raw sensor signal → processed features → decision-ready reports. The same signal processing and feature extraction pipeline used in wearable device firmware and health analytics platforms.</div>
         </div>
       </div>
 
