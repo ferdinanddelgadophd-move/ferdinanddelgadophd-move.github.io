@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferdinand Delgado, PhD — Data Scientist & Applied Statistician</title>
+<title>Ferdinand Delgado, PhD — Applied Scientist & Quantitative Researcher</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -414,43 +414,29 @@
     font-size: 1.45rem;
     font-weight: 500;
     color: var(--black);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.3;
   }
 
-  .project-summary {
+  .project-problem {
     font-size: 0.88rem;
     color: var(--dark-gray);
     line-height: 1.8;
-    margin-bottom: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
 
-  .project-bullets {
-    list-style: none;
-    margin-bottom: 1.25rem;
-    padding: 0;
+  .project-problem strong {
+    color: var(--charcoal);
+    font-weight: 600;
   }
 
-  .project-bullets li {
+  .project-approach {
     font-size: 0.88rem;
     color: var(--dark-gray);
     line-height: 1.8;
     font-weight: 300;
-    padding-left: 1.25rem;
-    position: relative;
-    margin-bottom: 0.35rem;
-  }
-
-  .project-bullets li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.7em;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--gold);
+    margin-bottom: 1rem;
   }
 
   .project-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
@@ -479,15 +465,6 @@
   .project-link:hover { color: var(--gold); }
 
   .project-outcome {
-    font-size: 0.82rem;
-    color: var(--gold-dark);
-    font-weight: 500;
-    padding-top: 1rem;
-    border-top: 1px solid var(--cream);
-    line-height: 1.7;
-  }
-
-  .project-focus {
     font-size: 0.82rem;
     color: var(--gold-dark);
     font-weight: 500;
@@ -616,13 +593,6 @@
     border-top: 1px solid var(--cream);
   }
 
-  .footer-copy {
-    font-size: 0.72rem;
-    color: var(--mid-gray);
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-  }
-
   .footer-credit {
     font-size: 0.7rem;
     color: var(--mid-gray);
@@ -678,7 +648,6 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* Section divider */
   .section-divider {
     width: 100%;
     height: 1px;
@@ -744,7 +713,6 @@
       <span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#applied-research">Applied Research</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#publications">Publications</a></li>
@@ -757,22 +725,26 @@
 <div class="container">
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-eyebrow">Interdisciplinary Research Scientist · Data Scientist · Applied Statistician</div>
-      <h1>Turning complex data<br>into <strong>actionable patterns</strong></h1>
+      <div class="hero-eyebrow">Applied Scientist · Quantitative Researcher</div>
+      <h1>Making sense of<br><strong>human movement data</strong></h1>
       <p class="hero-description">
-        Interdisciplinary researcher bridging biomechanics, data science, and human performance. 
-        Working with populations from athletes to older adults, I specialize in building 
-        Python-based data pipelines, statistical modeling, and finding conditional relationships 
-        in complex datasets. Background in mathematics with graduate training in movement science.
+        I analyze sensor data from force plates, wearables, and motion capture systems to answer 
+        questions that matter — who's at risk for falling, which athletes are compensating, 
+        and what the numbers actually mean for the people behind them. Mathematics background. 
+        PhD in movement science. A decade in sport and clinical research.
       </p>
       <div class="hero-highlights">
         <span class="hero-highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Sensor signals → statistical models → decisions
+        </span>
+        <span class="hero-highlight-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Multi-session participant coordination & longitudinal study execution
+          Athletes, older adults, and clinical populations
         </span>
         <span class="hero-highlight-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-          Translating sensor data into tools, reports, and systems that drive decisions
+          Running a consultancy serving real clients
         </span>
       </div>
       <div class="hero-contact">
@@ -804,7 +776,11 @@
 <div class="stats-strip">
   <div class="stat-cell">
     <div class="stat-number">PhD</div>
-    <div class="stat-label">Exercise & Nutritional Sciences</div>
+    <div class="stat-label">Movement Science (Biomechanics)</div>
+  </div>
+    <div class="stat-cell">
+    <div class="stat-number">MS</div>
+    <div class="stat-label">Kinesiology (Sport Science)</div>
   </div>
   <div class="stat-cell">
     <div class="stat-number">BS</div>
@@ -812,57 +788,73 @@
   </div>
   <div class="stat-cell">
     <div class="stat-number">10+</div>
-    <div class="stat-label">Years in Sport Science</div>
+    <div class="stat-label">Years in Sport & Clinical Research</div>
   </div>
-  <div class="stat-cell">
-    <div class="stat-number">4</div>
-    <div class="stat-label">Degrees & Certificates</div>
-  </div>
+
 </div>
 
 <div class="container">
 
   <!-- ============================================================ -->
-  <!-- NEW SECTION: Applied Research & Data Work                     -->
+  <!-- CONSOLIDATED: Projects (one section, no redundancy)           -->
   <!-- ============================================================ -->
-  <section class="section" id="applied-research">
-    <div class="section-label">Applied Research & Data Work</div>
-    <h2 class="section-title">Research Operations & Sensor Analytics</h2>
-    <p class="section-subtitle">Human-centered research designed around execution, scalability, and translating sensor data into real-world outcomes.</p>
+  <section class="section" id="projects">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">Real-world analytical systems built for real users — not toy datasets or classroom exercises.</p>
 
     <div class="projects-grid">
 
-      <!-- Applied Project 1: Force Plate Assessment System -->
+      <!-- Project 1: Force Plate Assessment System -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
           </div>
-          <div class="project-type">Data Product<br>& Tooling</div>
+          <div class="project-type">Sensor<br>Analytics</div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">Force Plate Assessment System — Signal Processing to PDF Reports</h3>
-          <ul class="project-bullets">
-            <li>Built a full-stack reporting tool that pulls raw force plate data via the Hawkin Dynamics API, applies signal processing (4th-order Butterworth low-pass filter at 10 Hz, mean-removal centering), and computes derived sway metrics: path length integration, 95% confidence ellipse via covariance eigenvalues, AP/ML range, and sway velocity.</li>
-            <li>Implemented event detection and feature extraction from continuous force-time signals — including activity duration detection from bilateral force plates and quadrant-based COP angle segmentation for automatic lean-direction classification from ~60s balance trials.</li>
-            <li>Designed for non-technical practitioners: a Flask-based GUI handles athlete selection, test configuration, and branded multi-page PDF generation. Deployed with D1 collegiate athletes, older adult clinical populations, and high school programs.</li>
-          </ul>
+          <h3 class="project-title">Force Plate Assessment Reports</h3>
+          <p class="project-problem"><strong>Problem:</strong> Coaches and clinicians collecting force plate data had no efficient way to turn raw signals into interpretable, branded reports they could use with athletes and patients.</p>
+          <p class="project-approach">Built an end-to-end system that pulls raw force-time data via the Hawkin Dynamics API, applies signal processing (Butterworth filtering, COP centering, Savitzky-Golay differentiation), computes derived metrics (sway path length, 95% confidence ellipse, asymmetry indices, EUR, DSI), and generates multi-page PDF reports with trend analysis across sessions. A Flask interface lets non-technical users select athletes, configure tests, and generate reports without touching code.</p>
           <div class="project-details">
-            <span class="project-tag">Python</span>
             <span class="project-tag">Signal Processing</span>
-            <span class="project-tag">Butterworth Filter</span>
             <span class="project-tag">COP Analysis</span>
-            <span class="project-tag">Event Detection</span>
-            <span class="project-tag">Flask</span>
+            <span class="project-tag">Feature Extraction</span>
+            <span class="project-tag">Automated Reporting</span>
+            <span class="project-tag">Python</span>
             <span class="project-tag">REST API</span>
-            <span class="project-tag">PDF Generation</span>
           </div>
           <a href="https://github.com/ferdinanddelgadophd-move/force-plate-report-generator" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-focus"><strong>Focus:</strong> Raw sensor signal → processed features → decision-ready reports. The same signal processing and feature extraction pipeline used in wearable device firmware and health analytics platforms.</div>
+          <div class="project-outcome"><strong>Outcome:</strong> Deployed with D1 collegiate athletes, high school programs, and older adult clinical populations. Generates comprehensive assessment reports in under 30 seconds — replacing hours of manual analysis. Currently used as the core service offering of Move, Measure, Analyze LLC.</div>
         </div>
       </div>
 
-      <!-- Applied Project 2: VR Longitudinal Intervention -->
+      <!-- Project 2: Gait & Fall Risk -->
+      <div class="project-card fade-in">
+        <div class="project-sidebar">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m9 22 3-9 3 9"/><path d="m6 13 3 1.5"/><path d="m18 13-3 1.5"/><path d="M12 13V8"/></svg>
+          </div>
+          <div class="project-type">Clinical<br>Classification</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Gait Deterioration & Fall Risk Classification</h3>
+          <p class="project-problem"><strong>Problem:</strong> Standard gait assessments capture averages across an entire walk — but fall risk may be better predicted by how gait breaks down over time, especially under fatigue.</p>
+          <p class="project-approach">Designed a quarters-based segmentation approach for 6-minute walk test data from wearable IMU sensors (APDM Opal). Instead of averaging across the full walk, I extracted gait features per quarter to capture fatigue-related deterioration patterns — speed decline, variability changes, asymmetry shifts. Built the full analytical pipeline: feature engineering, assumption testing, effect size ranking, FDR correction, and logistic regression with ROC/AUC evaluation.</p>
+          <div class="project-details">
+            <span class="project-tag">Wearable IMU Data</span>
+            <span class="project-tag">Feature Engineering</span>
+            <span class="project-tag">Logistic Regression</span>
+            <span class="project-tag">ROC / AUC</span>
+            <span class="project-tag">Clinical Research</span>
+          </div>
+          <a href="https://github.com/ferdinanddelgadophd-move/gait-fall-risk-analysis" class="project-link" target="_blank">View on GitHub →</a>
+          <div class="project-outcome"><strong>Outcome:</strong> Novel feature engineering approach identified gait markers that discriminate fall risk in older adults (n=60). The same analytical logic — extracting temporal patterns from continuous wearable signals — applies directly to health analytics in consumer wearables.</div>
+        </div>
+      </div>
+
+      <!-- Project 3: VR Intervention Study -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -871,47 +863,39 @@
           <div class="project-type">Research<br>Operations</div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">VR-Based Balance & Cognition Intervention (Longitudinal)</h3>
-          <ul class="project-bullets">
-            <li>Designed and executed a multi-session intervention study (2x/week over 8 weeks) using immersive VR with older adult participants, managing recruitment, scheduling, safety monitoring, and session-level data collection.</li>
-            <li>Coordinated IRB-approved protocols, consent workflows, and equipment setup across repeated lab visits — ensuring consistent data capture and participant retention throughout the study period.</li>
-            <li>Collected and integrated cognitive, balance, and self-report datasets across timepoints to assess intervention effects and practice-related changes.</li>
-          </ul>
+          <h3 class="project-title">VR-Based Balance & Cognition Intervention</h3>
+          <p class="project-problem"><strong>Problem:</strong> Can immersive VR training improve balance and cognitive function in older adults? Answering this requires a tightly controlled longitudinal study with a population that's hard to recruit and retain.</p>
+          <p class="project-approach">Designed and executed a multi-session intervention study (2x/week over 8 weeks) with older adult participants. Managed the full research operation: IRB protocols, informed consent workflows, equipment calibration, session-level data collection, and participant scheduling across repeated lab visits. Integrated cognitive, balance, and self-report datasets across timepoints to assess intervention effects and practice-related changes.</p>
           <div class="project-details">
+            <span class="project-tag">Longitudinal Design</span>
             <span class="project-tag">Human Subjects Research</span>
             <span class="project-tag">IRB Protocols</span>
-            <span class="project-tag">Longitudinal Design</span>
-            <span class="project-tag">Participant Management</span>
-            <span class="project-tag">VR Intervention</span>
+            <span class="project-tag">Multimodal Data Integration</span>
+            <span class="project-tag">Participant Retention</span>
           </div>
-          <div class="project-focus"><strong>Focus:</strong> Scalable lab operations, multi-visit participant workflows, and structured data collection — the operational backbone of applied research in wearable and consumer health technology.</div>
+          <div class="project-outcome"><strong>Outcome:</strong> Successfully executed a complex multi-visit study with a challenging population. Presented preliminary findings at the Gerontological Society of America Annual Meeting (2024). This is the operational backbone of applied research — the ability to design a study, run it cleanly, and produce trustworthy data.</div>
         </div>
       </div>
 
-      <!-- Applied Project 3: Wearable Gait Analysis Pipeline -->
+      <!-- Project 4: Hawkin API Data Pipeline -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
           </div>
-          <div class="project-type">Wearable<br>Sensor Data</div>
+          <div class="project-type">Data<br>Pipeline</div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">IMU-Based Gait Analysis & Fall Risk Classification</h3>
-          <ul class="project-bullets">
-            <li>Processed wearable IMU data (APDM Opal sensors) from a 6-minute walk test, extracting gait metrics across walk segments to identify fatigue-related deterioration patterns linked to fall history.</li>
-            <li>Built a Python-based analytical pipeline for feature engineering, assumption testing, effect size ranking, and logistic regression with ROC/AUC evaluation on clinical gait data.</li>
-            <li>Designed a novel quarters-based segmentation approach to transform raw time-series sensor data into interpretable, clinically relevant features — bridging the gap between raw wearable output and actionable health insights.</li>
-          </ul>
+          <h3 class="project-title">Hawkin Dynamics API → Structured Data Pipeline</h3>
+          <p class="project-problem"><strong>Problem:</strong> Organizations using Hawkin Dynamics force plates had athlete data locked behind an API with no easy way to extract, organize, or analyze it at scale.</p>
+          <p class="project-approach">Built Python scripts to extract full organizational data from the Hawkin Dynamics API — athletes, teams, groups, and all historical assessment data. Handles pagination, rate limiting, and data type mapping, then outputs clean, analysis-ready Excel workbooks.</p>
           <div class="project-details">
-            <span class="project-tag">IMU Sensors (APDM Opal)</span>
-            <span class="project-tag">Gait Analysis</span>
+            <span class="project-tag">REST API Integration</span>
+            <span class="project-tag">ETL Pipeline</span>
+            <span class="project-tag">Data Cleaning</span>
             <span class="project-tag">Python</span>
-            <span class="project-tag">Feature Engineering</span>
-            <span class="project-tag">Clinical Classification</span>
           </div>
-          <a href="https://github.com/ferdinanddelgadophd-move/gait-fall-risk-analysis" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-focus"><strong>Focus:</strong> Wearable sensor data processing and feature extraction — the same analytical workflows used in product R&D at companies building health and performance wearables.</div>
+          <div class="project-outcome"><strong>Outcome:</strong> Automates what previously required manual export and cleanup — giving practitioners immediate access to their full dataset for analysis, reporting, and decision-making.</div>
         </div>
       </div>
 
@@ -921,167 +905,50 @@
   <div class="section-divider"></div>
 
   <!-- ============================================================ -->
-  <!-- EXISTING SECTION: Projects & Applications                     -->
+  <!-- EXPERTISE (reframed around outcomes)                          -->
   <!-- ============================================================ -->
-  <section class="section" id="projects">
-    <div class="section-label">Selected Work</div>
-    <h2 class="section-title">Projects & Applications</h2>
-    <p class="section-subtitle">Production tools, analytical pipelines, and research applications built to solve real problems with data.</p>
-
-    <div class="projects-grid">
-
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-          </div>
-          <div class="project-type">Full-Stack<br>Data App</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Automated Force Plate Assessment Reports</h3>
-          <p class="project-summary">
-            End-to-end reporting system that pulls raw force plate data from the Hawkin Dynamics API, applies signal 
-            processing (Butterworth filtering, COP centering, Savitzky-Golay differentiation), and generates premium, 
-            branded HTML and PDF assessment reports. Features an interactive Flask web app for athlete and test configuration, 
-            Matplotlib visualizations, multi-session trend analysis, asymmetry assessment with configurable thresholds, 
-            derived performance metrics (EUR, DSI), and optional AI-powered interpretations via the Claude API.
-          </p>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Signal Processing</span>
-            <span class="project-tag">Flask</span>
-            <span class="project-tag">Jinja2</span>
-            <span class="project-tag">Playwright</span>
-            <span class="project-tag">REST API</span>
-            <span class="project-tag">Matplotlib</span>
-            <span class="project-tag">Claude AI</span>
-            <span class="project-tag">PDF Generation</span>
-          </div>
-          <a href="https://github.com/ferdinanddelgadophd-move/force-plate-report-generator" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-outcome">Deployed for use with D1 collegiate athletes — generates comprehensive multi-page reports in under 30 seconds with automated force-time analysis, asymmetry assessment, and trend tracking across sessions.</div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m9 22 3-9 3 9"/><path d="m6 13 3 1.5"/><path d="m18 13-3 1.5"/><path d="M12 13V8"/></svg>
-          </div>
-          <div class="project-type">Statistical<br>Modeling</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Gait Deterioration & Fall Risk Classification</h3>
-          <p class="project-summary">
-            Developed an analytical pipeline to classify fallers versus non-fallers using 6-minute walk test data 
-            from IMU-based gait analysis (APDM Mobility Lab). The approach segments gait cycles into quarters 
-            to examine fatigue-related deterioration patterns, extracting features like gait speed decline, 
-            variability changes, and asymmetry shifts across the walk. Statistical analysis includes assumption 
-            testing, effect size ranking, FDR correction, and logistic regression with ROC/AUC evaluation.
-          </p>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Logistic Regression</span>
-            <span class="project-tag">ROC / AUC</span>
-            <span class="project-tag">IMU Sensor Data</span>
-            <span class="project-tag">Clinical Research</span>
-          </div>
-          <a href="https://github.com/ferdinanddelgadophd-move/gait-fall-risk-analysis" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-outcome">Novel quarters-based feature engineering approach to identify gait markers that discriminate fall risk in older adults (n=60).</div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
-          </div>
-          <div class="project-type">Data<br>Engineering</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Hawkin API → Excel Data Extraction Pipeline</h3>
-          <p class="project-summary">
-            Built Python scripts to extract full organizational data from the Hawkin Dynamics API — including 
-            athletes, teams, groups, and all historical assessment data — and output it into professionally 
-            formatted Excel spreadsheets. Handles pagination, rate limiting, data type mapping, and 
-            produces clean, analysis-ready workbooks for downstream use.
-          </p>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">REST API</span>
-            <span class="project-tag">Excel / openpyxl</span>
-            <span class="project-tag">ETL Pipeline</span>
-            <span class="project-tag">Data Cleaning</span>
-          </div>
-          <div class="project-outcome">Transforms raw API data into structured, formatted spreadsheets — automating what previously required manual export and cleanup.</div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-sidebar">
-          <div class="project-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4c0 2 1.5 3.5 2.5 5 .5.8 1.5 2.5 1.5 5"/><path d="M12 2a4 4 0 0 1 4 4c0 2-1.5 3.5-2.5 5-.5.8-1.5 2.5-1.5 5"/><path d="M8 16h8"/><path d="M9 20h6"/></svg>
-          </div>
-          <div class="project-type">AI /<br>RAG</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">Biomechanics Research RAG System</h3>
-          <p class="project-summary">
-            Built a Retrieval-Augmented Generation system for querying biomechanics research literature. 
-            Ingests PDF textbooks and papers, chunks and embeds them into a ChromaDB vector database, 
-            and generates cited answers using the Claude API. Enables natural language queries against 
-            thousands of pages of research with source attribution and page references.
-          </p>
-          <div class="project-details">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">ChromaDB</span>
-            <span class="project-tag">Claude API</span>
-            <span class="project-tag">RAG Architecture</span>
-            <span class="project-tag">Vector Embeddings</span>
-          </div>
-          <a href="https://github.com/ferdinanddelgadophd-move/biomechanics-rag" class="project-link" target="_blank">View on GitHub →</a>
-          <div class="project-outcome">Query 4,500+ document chunks from biomechanics textbooks — bridging research literature with practical questions using AI.</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <section class="section" id="expertise">
     <div class="section-label">Core Competencies</div>
-    <h2 class="section-title">Expertise</h2>
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-subtitle">Where domain expertise, quantitative training, and real-world application intersect.</p>
 
     <div class="expertise-grid">
       <div class="expertise-cell fade-in">
-        <h4>Statistical Analysis</h4>
-        <p>Multivariate analysis, logistic regression, interaction effects, effect sizes, FDR correction, ROC/AUC evaluation, assumption testing, normative modeling, and percentile analysis.</p>
+        <h4>Finding Patterns in Sensor Data</h4>
+        <p>Processing raw signals from force plates, IMUs, and wearables into interpretable features. Butterworth filtering, event detection, COP sway metrics, time-series segmentation — the same workflows used in wearable product R&D and health analytics.</p>
       </div>
       <div class="expertise-cell fade-in">
-        <h4>Python & Data Tools</h4>
-        <p>Python for data pipelines, API integrations, automated reporting, and statistical computing. PDF generation, Excel automation, and data visualization.</p>
+        <h4>Statistical Modeling & Inference</h4>
+        <p>Logistic regression, interaction effects, mediation analysis, multilevel modeling, effect sizes, FDR correction, ROC/AUC evaluation. Trained to ask whether a result is meaningful, not just significant.</p>
       </div>
       <div class="expertise-cell fade-in">
-        <h4>Biomechanics & Human Performance</h4>
-        <p>Force plate assessment, gait analysis, IMU sensor data processing, motion capture, and athletic performance testing. Deep domain expertise in translating movement data into practical insights.</p>
+        <h4>Knowing What the Numbers Mean</h4>
+        <p>A decade of working with athletes and clinical populations means I understand what's behind the data — why a gait metric changed, what an asymmetry score means for return-to-play, when a finding is clinically relevant versus statistically noisy.</p>
       </div>
       <div class="expertise-cell fade-in">
-        <h4>Research Design & Operations</h4>
-        <p>PhD-trained in experimental design, human subjects research (IRB), participant recruitment and retention, multi-session scheduling, and scalable data collection workflows.</p>
+        <h4>Designing Studies That Produce Clean Data</h4>
+        <p>PhD-trained in experimental design, IRB-approved human subjects research, multi-session scheduling, and scalable data collection. The ability to design a study that generates trustworthy data is upstream of everything else.</p>
       </div>
       <div class="expertise-cell fade-in">
-        <h4>Data Communication</h4>
-        <p>Translating complex statistical findings into clear, actionable reports for non-technical audiences. Experience building automated reporting systems.</p>
+        <h4>Communicating Results to Non-Technical Audiences</h4>
+        <p>Building automated reports that translate complex analyses into clear visuals and plain-language summaries for coaches, clinicians, and executives who need to make decisions — not read code.</p>
       </div>
       <div class="expertise-cell fade-in">
-        <h4>Wearable Sensor Analytics & Signal Processing</h4>
-        <p>Processing raw sensor signals from force plates and IMUs: Butterworth filtering, Savitzky-Golay differentiation, event detection, COP sway metric computation, and feature engineering from continuous time-series data for downstream classification and reporting.</p>
+        <h4>Building Analytical Systems, Not One-Off Scripts</h4>
+        <p>From API integration to automated PDF generation, I build tools that other people can use — not notebooks that only I can run. Currently operating a consultancy where these systems serve real paying clients.</p>
       </div>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <!-- ============================================================ -->
+  <!-- PUBLICATIONS (unchanged)                                      -->
+  <!-- ============================================================ -->
   <section class="section" id="publications">
     <div class="section-label">Research Output</div>
     <h2 class="section-title">Publications</h2>
-    <p class="section-subtitle">Peer-reviewed research and published conference abstracts with emphasis on statistical analysis. The <sup>Δ</sup> symbol indicates I performed the statistical analysis for that publication.</p>
+    <p class="section-subtitle">Peer-reviewed research and published conference abstracts. The <sup>Δ</sup> symbol indicates I performed the statistical analysis.</p>
 
     <div style="margin-top: 2.5rem;">
       <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; color: var(--black); margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--cream);">Peer-Reviewed Articles</h4>
@@ -1162,6 +1029,11 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <!-- ============================================================ -->
+  <!-- EDUCATION (unchanged)                                         -->
+  <!-- ============================================================ -->
   <section class="section" id="education">
     <div class="section-label">Academic Background</div>
     <h2 class="section-title">Education</h2>
@@ -1200,10 +1072,13 @@
     </div>
   </section>
 
+  <!-- ============================================================ -->
+  <!-- CTA                                                           -->
+  <!-- ============================================================ -->
   <section class="cta-section" id="contact">
     <div class="cta-box">
       <h3>Let's work together</h3>
-      <p>Open to data science, applied statistics, and quantitative research roles. Available for full-time positions and consulting engagements.</p>
+      <p>Open to applied scientist, quantitative research, and data analyst roles in wearable tech, sports science, and health analytics. Also available for consulting.</p>
       <div class="cta-links">
         <a href="mailto:ferdinanddelgadophd@gmail.com" class="cta-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -1228,7 +1103,6 @@
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  // Hamburger menu toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   
@@ -1237,7 +1111,6 @@
     navLinks.classList.toggle('active');
   });
 
-  // Close menu when a link is clicked
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
