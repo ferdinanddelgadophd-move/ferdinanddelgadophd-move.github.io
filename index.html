@@ -117,9 +117,7 @@
     gap: 4rem;
   }
 
-  .hero-content {
-    flex: 1;
-  }
+  .hero-content { flex: 1; }
 
   .hero-photo {
     flex-shrink: 0;
@@ -426,10 +424,7 @@
     margin-bottom: 1rem;
   }
 
-  .project-problem strong {
-    color: var(--charcoal);
-    font-weight: 600;
-  }
+  .project-problem strong { color: var(--charcoal); font-weight: 600; }
 
   .project-approach {
     font-size: 0.88rem;
@@ -473,6 +468,66 @@
     line-height: 1.7;
   }
 
+  .project-scale-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--gold-dark);
+    background: var(--gold-glow);
+    border: 1px solid rgba(197,165,90,0.2);
+    border-radius: 100px;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .project-scale-badge svg { width: 13px; height: 13px; }
+
+  /* ── TECHNICAL SKILLS ── */
+  .skills-table { margin-top: 3rem; }
+
+  .skill-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--cream);
+  }
+
+  .skill-row:last-child { border-bottom: none; }
+
+  .skill-category {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    padding-top: 0.3rem;
+  }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0.28rem 0.7rem;
+    background: var(--off-white);
+    border: 1px solid var(--light-gray);
+    border-radius: 100px;
+    color: var(--dark-gray);
+    letter-spacing: 0.2px;
+  }
+
+  .skill-tag.highlight {
+    background: var(--gold-glow);
+    border-color: rgba(197,165,90,0.22);
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+
+  /* ── EXPERTISE ── */
   .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -614,7 +669,6 @@
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* Hamburger menu */
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -636,17 +690,9 @@
     transition: all 0.3s ease;
   }
 
-  .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .nav-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+  .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
   .section-divider {
     width: 100%;
@@ -680,6 +726,7 @@
     .project-sidebar { flex-direction: row; padding: 1.25rem 2rem; justify-content: flex-start; }
     .expertise-grid { grid-template-columns: 1fr; }
     .education-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    .skill-row { grid-template-columns: 1fr; gap: 0.5rem; }
     .hero { padding: 9rem 0 4rem; flex-direction: column; text-align: center; }
     .hero-photo { order: -1; }
     .hero-headshot { width: 200px; height: 200px; }
@@ -708,13 +755,12 @@
   <div class="nav-inner">
     <a href="#" class="nav-name">Ferdinand Delgado, PhD</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -742,6 +788,10 @@
         <span class="hero-highlight-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
           Running a consultancy serving real clients
+        </span>
+        <span class="hero-highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Teaching Applied Biomechanics at UNH
         </span>
       </div>
       <div class="hero-contact">
@@ -775,7 +825,7 @@
     <div class="stat-number">PhD</div>
     <div class="stat-label">Movement Science (Biomechanics)</div>
   </div>
-    <div class="stat-cell">
+  <div class="stat-cell">
     <div class="stat-number">MS</div>
     <div class="stat-label">Kinesiology (Sport Science)</div>
   </div>
@@ -787,13 +837,12 @@
     <div class="stat-number">10+</div>
     <div class="stat-label">Years in Sport & Clinical Research</div>
   </div>
-
 </div>
 
 <div class="container">
 
   <!-- ============================================================ -->
-  <!-- CONSOLIDATED: Projects (one section, no redundancy)           -->
+  <!-- PROJECTS                                                       -->
   <!-- ============================================================ -->
   <section class="section" id="projects">
     <div class="section-label">Selected Work</div>
@@ -802,7 +851,37 @@
 
     <div class="projects-grid">
 
-      <!-- Project 1: Force Plate Assessment System -->
+      <!-- Project 1: Sprint Performance Projection Dashboard -->
+      <div class="project-card fade-in">
+        <div class="project-sidebar">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="project-type">Sport<br>Analytics · ML</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Sprint Performance Projection Dashboard</h3>
+          <p class="project-problem"><strong>Problem:</strong> Coaches and athletes have no principled way to project next-year sprint times — most rely on intuition or flat conversion tables that ignore individual development trajectories, event profiles, or the structural difference between same-season equivalency and year-over-year growth.</p>
+          <p class="project-approach">Built a single-file Dash app backed by a SQLite database of Section V meet results spanning five sprint events (55m, 100m, 200m, 300m, 400m). Implemented two model families: same-season equivalency models (OLS + Random Forest, 630 models across events, sexes, and grade levels) to contextualize a current performance relative to peers; and next-year projection models (Mixed Linear Models with random athlete intercepts, ~300 models) to forecast next season's best time from this season's trajectory. Season features include best time, first-meet time, improvement rate, and linear and quadratic trend. Validated via temporal holdout — trained on transitions through 2023, tested on 2024→2025. Integrated the Claude API to generate coach-facing narrative interpretations with SHA-256 response caching and a constrained system prompt that classifies model type, flags sparse-input projections, and enforces domain-appropriate language.</p>
+          <div class="project-details">
+            <span class="project-tag">Random Forest</span>
+            <span class="project-tag">Mixed Linear Models</span>
+            <span class="project-tag">OLS</span>
+            <span class="project-tag">Temporal Validation</span>
+            <span class="project-tag">Dash</span>
+            <span class="project-tag">SQLite</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Claude API</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--mid-gray); font-style: italic; margin-bottom: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;display:inline-block;vertical-align:-2px;margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Proprietary
+          </p>
+          <div class="project-outcome"><strong>Outcome:</strong> Best holdout MAE by event: 55m → 0.14s, 100m → 0.31s, 200m → 0.81s, 300m → 1.22s, 400m → 2.09s. The AI interpretation layer translates model outputs into actionable coaching language — flagging input depth, sprint profile type, and projection confidence — without overreaching into recommendations outside the athlete's event profile.</div>
+        </div>
+      </div>
+
+      <!-- Project 2: Force Plate Assessment System -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -827,7 +906,35 @@
         </div>
       </div>
 
-      <!-- Project 2: Gait & Fall Risk -->
+      <!-- Project 3: Hand-Timing Bias Analysis -->
+      <div class="project-card fade-in">
+        <div class="project-sidebar">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 8"/><path d="M9.5 12h5"/></svg>
+          </div>
+          <div class="project-type">Sport<br>Analytics</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Hand-Timing Bias in Section V Sprint Results</h3>
+          <div class="project-scale-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            82,000+ raw records · ~8,400 within-athlete pairs · 100m &amp; 200m · 2008–2025
+          </div>
+          <p class="project-problem"><strong>Problem:</strong> High school sprint times are routinely recorded by hand — but hand timing introduces a systematic positive bias relative to fully automatic timing (FAT). How large is that bias in practice, does it vary by performance level, and does it differ between the 100m and 200m?</p>
+          <p class="project-approach">Scraped and cleaned 17 years of Section V outdoor 100m and 200m results. Applied a within-athlete paired difference design — comparing each athlete's best hand-timed season performance against their best FAT performance in the same season, within a fixed date window that excludes championship meets. Binned results by FAT speed tier to quantify how bias magnitude varies across the performance distribution. Conducted the analysis separately by sex and event, then cross-compared 100m vs. 200m findings.</p>
+          <div class="project-details">
+            <span class="project-tag">Large-scale data</span>
+            <span class="project-tag">Web scraping</span>
+            <span class="project-tag">Paired difference analysis</span>
+            <span class="project-tag">Effect sizes</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Sports science</span>
+          </div>
+          <div class="project-outcome"><strong>Outcome:</strong> Found the same selection-driven pattern across both events: elite athletes' season bests converge (+0.11–0.15s FAT advantage at the top tier), while hand-timed marks pull ahead by 0.64–0.99s in the slower tiers. The 200m gap is consistently 1.5–2× the 100m gap — ruling out a flat conversion factor across the performance distribution.</div>
+        </div>
+      </div>
+
+      <!-- Project 4: Gait & Fall Risk -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -851,7 +958,7 @@
         </div>
       </div>
 
-      <!-- Project 3: VR Intervention Study -->
+      <!-- Project 5: VR Intervention Study -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -874,7 +981,7 @@
         </div>
       </div>
 
-      <!-- Project 4: Hawkin API Data Pipeline -->
+      <!-- Project 6: Hawkin API Data Pipeline -->
       <div class="project-card fade-in">
         <div class="project-sidebar">
           <div class="project-icon">
@@ -902,7 +1009,7 @@
   <div class="section-divider"></div>
 
   <!-- ============================================================ -->
-  <!-- EXPERTISE (reframed around outcomes)                          -->
+  <!-- EXPERTISE                                                      -->
   <!-- ============================================================ -->
   <section class="section" id="expertise">
     <div class="section-label">Core Competencies</div>
@@ -940,7 +1047,99 @@
   <div class="section-divider"></div>
 
   <!-- ============================================================ -->
-  <!-- PUBLICATIONS (unchanged)                                      -->
+  <!-- TECHNICAL SKILLS                                               -->
+  <!-- ============================================================ -->
+  <section class="section" id="skills">
+    <div class="section-label">Technical Proficiency</div>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Tools and methods used in production — across research pipelines, client-facing systems, and data products.</p>
+
+    <div class="skills-table">
+      <div class="skill-row fade-in">
+        <div class="skill-category">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Python</span>
+          <span class="skill-tag highlight">R</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Data & Analysis</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">pandas</span>
+          <span class="skill-tag highlight">NumPy</span>
+          <span class="skill-tag highlight">SciPy</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">statsmodels</span>
+          <span class="skill-tag">pingouin</span>
+          <span class="skill-tag">tidyverse</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Random Forest</span>
+          <span class="skill-tag">Mixed Linear Models</span>
+          <span class="skill-tag">Logistic Regression</span>
+          <span class="skill-tag">LASSO</span>
+          <span class="skill-tag">Temporal validation</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Visualization</div>
+        <div class="skill-tags">
+          <span class="skill-tag">matplotlib</span>
+          <span class="skill-tag">seaborn</span>
+          <span class="skill-tag">plotly</span>
+          <span class="skill-tag">ggplot2</span>
+          <span class="skill-tag">Dash</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Tools & Infra</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Jupyter</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">Playwright</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Jinja2</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">MariaDB</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Sensor & Signal</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Force plate analysis</span>
+          <span class="skill-tag highlight">IMU / wearable data</span>
+          <span class="skill-tag">Butterworth filtering</span>
+          <span class="skill-tag">COP metrics</span>
+          <span class="skill-tag">Time-series segmentation</span>
+          <span class="skill-tag">Gait analysis</span>
+        </div>
+      </div>
+      <div class="skill-row fade-in">
+        <div class="skill-category">Statistics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Multilevel modeling</span>
+          <span class="skill-tag">ROC / AUC</span>
+          <span class="skill-tag">FDR correction</span>
+          <span class="skill-tag">Effect sizes</span>
+          <span class="skill-tag">Mediation analysis</span>
+          <span class="skill-tag">Experimental design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================ -->
+  <!-- PUBLICATIONS                                                   -->
   <!-- ============================================================ -->
   <section class="section" id="publications">
     <div class="section-label">Research Output</div>
@@ -949,38 +1148,38 @@
 
     <div style="margin-top: 2.5rem;">
       <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; color: var(--black); margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--cream);">Peer-Reviewed Articles</h4>
-      
+
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Yu, F., Peterson, D.S., Ofori, E., MacKinnon, D.P., Belden, C., Adler, C.H., Beach, T.G., & Der Ananian, C. (2025). Apolipoprotein E, executive function, and falls across cognitive status: A cross-sectional study. <em>Dementia and Geriatric Disorders</em>. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Yu, F., Peterson, D.S., Ofori, E., MacKinnon, D.P., Belden, C., Adler, C.H., Beach, T.G., & Der Ananian, C. (2025). Apolipoprotein E, executive function, and falls across cognitive status: A cross-sectional study. <em>Dementia and Geriatric Disorders</em>.
           <a href="https://doi.org/10.1159/000548084" target="_blank" style="color: var(--gold-dark);">doi:10.1159/000548084</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          Ofori, E., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, James, D.L., Wilken, J., Hancock, L.M., Doniger, G.M., & Gudesblatt, M. (2024). Impact of distinct cognitive domains on gait variability in individuals with mild cognitive impairment and dementia. <em>Experimental Brain Research</em>. 
+          Ofori, E., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, James, D.L., Wilken, J., Hancock, L.M., Doniger, G.M., & Gudesblatt, M. (2024). Impact of distinct cognitive domains on gait variability in individuals with mild cognitive impairment and dementia. <em>Experimental Brain Research</em>.
           <a href="https://doi.org/10.1007/s00221-024-06832-9" target="_blank" style="color: var(--gold-dark);">doi:10.1007/s00221-024-06832-9</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          Vento, K.A., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, & Lynch, H. (2022). Lipid profiles of college female student-athletes participating at different competition levels of organized sport. <em>Frontiers in Sports and Active Living</em>. 
+          Vento, K.A., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, & Lynch, H. (2022). Lipid profiles of college female student-athletes participating at different competition levels of organized sport. <em>Frontiers in Sports and Active Living</em>.
           <a href="https://doi.org/10.3389/fspor.2022.841096" target="_blank" style="color: var(--gold-dark);">doi:10.3389/fspor.2022.841096</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          Vento, K.A., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Skinner, J., & Wardenaar, F. (2021). Funding and college-provided nutritional resources on diet quality among female athletes. <em>Journal of American College Health</em>. 
+          Vento, K.A., <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Skinner, J., & Wardenaar, F. (2021). Funding and college-provided nutritional resources on diet quality among female athletes. <em>Journal of American College Health</em>.
           <a href="https://doi.org/10.1080/07448481.2021.1947301" target="_blank" style="color: var(--gold-dark);">doi:10.1080/07448481.2021.1947301</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 2rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong> & Der Ananian, C. (2021). The use of virtual reality via head-mounted display on balance and gait in older adults: A scoping review. <em>Games for Health Journal</em>, 9(6). 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong> & Der Ananian, C. (2021). The use of virtual reality via head-mounted display on balance and gait in older adults: A scoping review. <em>Games for Health Journal</em>, 9(6).
           <a href="https://doi.org/10.1089/g4h.2019.0159" target="_blank" style="color: var(--gold-dark);">doi:10.1089/g4h.2019.0159</a>
         </p>
       </div>
@@ -989,35 +1188,35 @@
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup> & Greenberg, J.J. (2024). Cognitive and practice effects of immersive virtual reality use in older adults: Preliminary results. <em>Innovation in Aging</em>, 8(S1). Gerontological Society of America Annual Meeting. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup> & Greenberg, J.J. (2024). Cognitive and practice effects of immersive virtual reality use in older adults: Preliminary results. <em>Innovation in Aging</em>, 8(S1). Gerontological Society of America Annual Meeting.
           <a href="https://doi.org/10.1093/geroni/igae098.3939" target="_blank" style="color: var(--gold-dark);">doi:10.1093/geroni/igae098.3939</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Yu, F., MacKinnon, D.P., Peterson, D.S., Ofori, E., Adler, C., Beach, T.G., & Der Ananian, C. (2023). Severe Alzheimer's dementia alters the relationship between executive function and falls. <em>Innovation in Aging</em>, 7(S1). Gerontological Society of America Annual Meeting. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Yu, F., MacKinnon, D.P., Peterson, D.S., Ofori, E., Adler, C., Beach, T.G., & Der Ananian, C. (2023). Severe Alzheimer's dementia alters the relationship between executive function and falls. <em>Innovation in Aging</em>, 7(S1). Gerontological Society of America Annual Meeting.
           <a href="https://doi.org/10.1093/geroni/igad104.3588" target="_blank" style="color: var(--gold-dark);">doi:10.1093/geroni/igad104.3588</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Kaczmarek, O., Trebing, S., Zarif, M., Gudesblatt, M., & Ofori, E. (2021). Exploratory cross-sectional mediation analysis of the dual-task effect of cognition on gait in individuals with memory loss. <em>Alzheimer's & Dementia</em>, 17(S7). Alzheimer's Association International Conference. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Kaczmarek, O., Trebing, S., Zarif, M., Gudesblatt, M., & Ofori, E. (2021). Exploratory cross-sectional mediation analysis of the dual-task effect of cognition on gait in individuals with memory loss. <em>Alzheimer's & Dementia</em>, 17(S7). Alzheimer's Association International Conference.
           <a href="https://doi.org/10.1002/alz.054495" target="_blank" style="color: var(--gold-dark);">doi:10.1002/alz.054495</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Der Ananian, C., & Peterson, D. (2020). Balance and reactive steps in older adults with and without self-reported musculoskeletal conditions. <em>Innovation in Aging</em>, 4(S1). Gerontological Society of America Annual Meeting. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Der Ananian, C., & Peterson, D. (2020). Balance and reactive steps in older adults with and without self-reported musculoskeletal conditions. <em>Innovation in Aging</em>, 4(S1). Gerontological Society of America Annual Meeting.
           <a href="https://doi.org/10.1093/geroni/igaa057.1683" target="_blank" style="color: var(--gold-dark);">doi:10.1093/geroni/igaa057.1683</a>
         </p>
       </div>
 
       <div class="publication-item fade-in" style="margin-bottom: 1.5rem;">
         <p style="font-size: 0.88rem; color: var(--dark-gray); line-height: 1.8; font-weight: 300;">
-          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Der Ananian, C., & Merkel, A. (2019). Changes in physical function and body composition among group lifestyle balance program participants with arthritis. <em>Medicine & Science in Sports & Exercise</em>, 51(6S). American College of Sports Medicine Annual Meeting. 
+          <strong style="color: var(--charcoal);">Delgado, F.</strong><sup>Δ</sup>, Der Ananian, C., & Merkel, A. (2019). Changes in physical function and body composition among group lifestyle balance program participants with arthritis. <em>Medicine & Science in Sports & Exercise</em>, 51(6S). American College of Sports Medicine Annual Meeting.
           <a href="https://doi.org/10.1249/01.mss.0000561144.22005.d2" target="_blank" style="color: var(--gold-dark);">doi:10.1249/01.mss.0000561144.22005.d2</a>
         </p>
       </div>
@@ -1029,7 +1228,7 @@
   <div class="section-divider"></div>
 
   <!-- ============================================================ -->
-  <!-- EDUCATION (unchanged)                                         -->
+  <!-- EDUCATION                                                      -->
   <!-- ============================================================ -->
   <section class="section" id="education">
     <div class="section-label">Academic Background</div>
@@ -1102,7 +1301,7 @@
 
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
-  
+
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
